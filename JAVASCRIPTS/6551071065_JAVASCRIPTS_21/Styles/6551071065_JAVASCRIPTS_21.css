@@ -1,25 +1,32 @@
 body {
+  margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  display: flex;
-  justify-content: center;
-  padding: 50px;
+  color: #333;
 }
 
-.todo-container {
-  background-color: #fff;
-  padding: 20px 30px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 400px;
+.container {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #2c7be5; /* màu nền của "phiếu" */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  color: white;
 }
 
 h1 {
   text-align: center;
-  color: #333;
+  font-size: 36px;
+  margin-bottom: 20px;
 }
 
-.input-group {
+.instructions p {
+  font-size: 14px;
+  margin: 5px 0;
+  color: #ffe066;
+}
+
+.input-area {
   display: flex;
   margin-bottom: 20px;
 }
@@ -27,20 +34,21 @@ h1 {
 #todo-input {
   flex: 1;
   padding: 10px;
+  border: none;
+  border-radius: 5px 0 0 5px;
   font-size: 16px;
+  background-color: #ffffff;
+  color: #333;
 }
 
 #add-btn {
-  padding: 10px 15px;
-  font-size: 18px;
-  background-color: #28a745;
-  color: white;
+  background-color: #ffffff;
   border: none;
+  padding: 0 15px;
+  font-size: 20px;
   cursor: pointer;
-}
-
-#add-btn:hover {
-  background-color: #218838;
+  border-radius: 0 5px 5px 0;
+  color: #2c7be5;
 }
 
 #todo-list {
@@ -48,31 +56,28 @@ h1 {
   padding: 0;
 }
 
-.todo-item {
+#todo-list li {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 8px 10px;
-  border-bottom: 1px solid #ddd;
-}
-
-.todo-item.completed span {
-  text-decoration: line-through;
-  color: #888;
-}
-
-.todo-actions button {
-  margin-left: 5px;
-  border: none;
-  background: none;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
   cursor: pointer;
-  font-size: 16px;
+  color: white;
 }
 
-.todo-actions .check-btn {
-  color: green;
+.completed {
+  background-color: #51cf66;
+  text-decoration: line-through;
 }
 
-.todo-actions .delete-btn {
-  color: red;
+.pending {
+  background-color: #74c0fc;
+}
+
+.remove {
+  margin-left: 10px;
+  font-weight: bold;
+  cursor: pointer;
 }
