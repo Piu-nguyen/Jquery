@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Đặt vé xem phim</title>
+  <link rel="stylesheet" href="Styles/6551071065_JAVASCRIPTS_19.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>Đặt vé xem phim</h2>
+    <form id="ticketForm">
+      <label for="customer">Khách hàng:</label>
+      <input type="text" id="customer" required />
+
+      <label for="date">Ngày chiếu:</label>
+      <input type="date" id="date" required />
+
+      <label for="movie">Phim:</label>
+      <select id="movie" required>
+        <option value="" disabled selected>Chọn phim</option>
+        <option value="Mat biec">Mắt biếc</option>
+        <option value="Avengers">Avengers: Endgame</option>
+        <option value="Em chua 18">Em chưa 18</option>
+      </select>
+
+      <label for="showtime">Suất chiếu:</label>
+      <select id="showtime" required>
+        <option value="10h">10h</option>
+        <option value="12h">12h</option>
+        <option value="15h">15h</option>
+        <option value="18h">18h</option>
+      </select>
+
+      <label for="room">Phòng chiếu:</label>
+      <select id="room" required>
+        <option value="Vang">Vàng</option>
+        <option value="Do">Đỏ</option>
+        <option value="Xanh">Xanh</option>
+      </select>
+
+      <label for="seat">Chọn chỗ ngồi:</label>
+      <select id="seat" multiple size="5">
+        <option value="01">Ghế 01</option>
+        <option value="02">Ghế 02</option>
+        <option value="03">Ghế 03</option>
+        <option value="04">Ghế 04</option>
+        <option value="05">Ghế 05</option>
+      </select>
+
+      <button type="submit">Mua vé</button>
+    </form>
+
+    <div id="receipt"></div>
+  </div>
+
+  <script src="Scripts/6551071065_JAVASCRIPTS_19.js"></script>
+</body>
+</html>
